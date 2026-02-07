@@ -83,4 +83,15 @@ public class UsuarioConverter {
                 .ddd(telefone.getDdd())
                 .build();
     }
+
+    public Usuario updateUsuario(UsuarioDto usuarioDto, Usuario usuario) {
+        return Usuario.builder()
+                .nome(usuarioDto.getNome() != null ? usuarioDto.getNome() : usuario.getNome())
+                .id(usuario.getId())
+                .senha(usuarioDto.getSenha() != null ? usuarioDto.getSenha() : usuario.getSenha())
+                .enderecos(usuario.getEnderecos())
+                .telefones(usuario.getTelefones())
+                .email(usuarioDto.getEmail() != null ? usuarioDto.getEmail() : usuario.getEmail())
+                .build();
+    }
 }
