@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class EnderecoDto {
+    private Long id;
     private String rua;
     private Integer numero;
     private String complemento;
